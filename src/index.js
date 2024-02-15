@@ -1,8 +1,9 @@
-let numVitorias = 100
-let numDerrotas = 300
+let numVitorias = 101
+let numDerrotas = 30
 
 let saldoVitorias = fcnSaldoVitorias(numVitorias, numDerrotas)
 let nivel = fcnNivel(saldoVitorias)
+
 console.log (`O Herói tem de saldo de ** ${saldoVitorias} ** e está no nível de ** ${nivel}**`)
 
 function fcnSaldoVitorias(vitorias, derrotas) {
