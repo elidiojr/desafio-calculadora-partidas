@@ -1,5 +1,5 @@
-let numVitorias = 101
-let numDerrotas = 30
+let numVitorias = 106
+let numDerrotas = 5
 
 let saldoVitorias = fcnSaldoVitorias(numVitorias, numDerrotas)
 let nivel = fcnNivel(saldoVitorias)
@@ -13,30 +13,21 @@ function fcnSaldoVitorias(vitorias, derrotas) {
 
 function fcnNivel (saldoVitorias) {
     let nivel = ""
-    if (saldoVitorias < 10)
+    if (saldoVitorias <= 10)
         nivel = "Ferro" 
-    else {
-        if (saldoVitorias >= 11 && saldoVitorias <= 20)
+    else if (saldoVitorias <= 20)
             nivel = "Bronze"
-        else {
-            if (saldoVitorias >= 21 && saldoVitorias <= 50)
+        else if (saldoVitorias <= 50)
                 nivel = "Prata"
-            else {
-                if (saldoVitorias >= 51 && saldoVitorias <= 80)
+            else if (saldoVitorias <= 80)
                     nivel = "Ouro"
-                else {
-                    if (saldoVitorias >= 81 && saldoVitorias <= 90)
+                else if (saldoVitorias <= 90)
                         nivel = "Diamante"
-                    else {
-                        if (saldoVitorias >= 91 && saldoVitorias <= 100)
+                    else if (saldoVitorias <= 100)
                         nivel = "Lendário"
                     else
-                        nivel = "Imortal"
-                    }
-                }
-            }
-        }
-    }
+                        nivel = "Imortal"  
+    
     return nivel  
 }
 
